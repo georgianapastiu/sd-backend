@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(name="user")
+@Table(name="users")
 public class User {
 
     @Id
@@ -24,9 +24,9 @@ public class User {
     @Column(name = "rol",nullable = false)
     private Rol rol;
 
-    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,
+   @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
-    private Set<Device> devices;
+    private Set<Device> device;
 
 
 

@@ -48,7 +48,7 @@ public class DeviceServiceImpl implements DeviceService {
         device_to_update.setDescription(device.getDescription());
         device_to_update.setAddress(device.getAddress());
         device_to_update.setMaxHourlyEnergyConsumption(device.getMaxHourlyEnergyConsumption());
-        device_to_update.setUser(device.getUser());
+        //device_to_update.setUser(device.getUser());
         DeviceRepository.save(device_to_update);
         return device_to_update;
 

@@ -1,7 +1,5 @@
 package net.javaguides.springboot.controller;
 
-import net.javaguides.springboot.model.Address;
-import net.javaguides.springboot.model.Rol;
 import net.javaguides.springboot.model.Device;
 import net.javaguides.springboot.service.DeviceService;
 import org.springframework.core.convert.converter.Converter;
@@ -17,13 +15,7 @@ import java.util.List;
 @RequestMapping("/api/devices")
 public class DeviceController {
 
-    @Component
-    public class AddressEnumConverter implements Converter<String, Address> {
-        @Override
-        public Address convert(String value) {
-            return Address.valueOf(value);
-        }
-    }
+
     private DeviceService deviceService;
 
     public DeviceController(DeviceService deviceService){

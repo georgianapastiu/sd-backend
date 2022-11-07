@@ -16,12 +16,14 @@ public class Measurement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne(fetch=FetchType.LAZY,optional = false)
-    @JoinColumn(name="device",nullable = false)
+    @JoinColumn(name="device",referencedColumnName="id",nullable = false)
     private Device device;
-    @Column(nullable = false)
+    @Column(name ="time",nullable = false)
     private Timestamp time;
-    @Column(nullable = false)
+    @Column(nullable = false,name ="energyConsumption")
     private int energyConsumption;
+    @Column(nullable = false)
+    private int consumption;
 
 
 

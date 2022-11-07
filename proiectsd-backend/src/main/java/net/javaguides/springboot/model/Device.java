@@ -16,12 +16,12 @@ public class Device {
     @Column(name = "description",nullable = false)
     private String description;
     @Column(name = "address",nullable = false)
-    private Address address;
+    private String address;
     @Column(name = "maxHourlyEnergyConsumption",nullable = false)
     private int maxHourlyEnergyConsumption;
 
     @ManyToOne(fetch=FetchType.LAZY,optional = false)
-    @JoinColumn(name="user")
+    @JoinColumn(name="user",referencedColumnName="id")
     private User user;
 
     @OneToMany(mappedBy = "device", fetch = FetchType.LAZY,

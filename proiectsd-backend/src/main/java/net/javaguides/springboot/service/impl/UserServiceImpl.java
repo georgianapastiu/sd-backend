@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
         user_to_update.setName(user.getName());
         user_to_update.setUsername(user.getUsername());
         user_to_update.setRol(user.getRol());
-        user_to_update.setDevices(user.getDevices());
+        user_to_update.setDevice(user.getDevice());
         userRepository.save(user_to_update);
         return user_to_update;
 
